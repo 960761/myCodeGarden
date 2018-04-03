@@ -3,11 +3,13 @@
 ### lists of notes
 
 
-　　　　{% for post in site.posts %}
-
-　　　　　　{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-
-　　　　{% endfor %}
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
 
 
 
