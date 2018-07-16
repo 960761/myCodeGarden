@@ -1,0 +1,57 @@
+<!--
+To animate an element, you need to know about the animation properties and the @keyframes rule. 
+The animation properties control how the animation should behave and the @keyframes rule controls what happens during that animation. 
+There are eight animation properties in total. 
+
+animation-name: sets the name of the animation, which is later used by @keyframes to tell CSS which rules go with which animations.
+animation-duration: sets the length of time for the animation.
+animation-fill-mode: if you want the ele remains the last state of @keyframes, you can set this to forwards.
+animation-iteration-count: the repeat times of animation
+animation-timing-function:
+
+@keyframes is how to specify exactly what happens within the animation over the duration. 
+-->
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		  div {
+			height: 40px;
+			width: 70%;
+			background: black;
+			margin: 50px auto;
+			border-radius: 5px;
+			position: relative;
+		  }
+		#rect {
+		  animation-name: rainbow;
+		  animation-duration: 2s;
+		  animation-iteration-count: 3;
+		}
+
+		@keyframes rainbow {
+		  0% {
+			background-color: blue;
+			top: 0px;
+			left: 0px;
+		  }
+		  50% {
+			background-color: green;
+			top: 50px;
+			left: 25px;
+		  }
+		  100% {
+			background-color: yellow;
+			top: 0px;
+			left: 0px;
+		  }
+		}
+		</style>
+	</head>
+	
+	<body>
+		<div id="rect"></div>
+	</body>
+</html>
