@@ -1,0 +1,88 @@
+
+<!--
+01. box-shadow : apply one or more shadows to an element, 
+               takes values for 
+			   offset-x (how far to push the shadow horizontally from the element), 
+			   offset-y (how far to push the shadow vertically from the element), 
+			   blur-radius, spread-radius and a color value, in that order. 
+			   The blur-radius and spread-radius values are optional.
+			   demo:box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); this demo add 2 shadows
+02. border-radius : to add round corners to element, can use 50% to create circular effect, can receive 1-4 values, refer to w3school
+Moon: create a round, transparent object with a crisp shadow that is slightly offset to the side, the shadow is the moon shape you see.
+      key:  background-color to transparent; border-radius to 50%, box-shadow is actually the moon. 
+	  You can change the value to see.
+
+03. :beforte, :after These selectors are used to add something before or after a selected element, 
+       For these 2 selectors to function properly, they must have a defined content property. It usually has content such as a photo or text. 
+	   When the :before and :after selectors add shapes, the content property is still required, but it's set to an empty string.
+
+04. transform:rotate(45deg);
+Heart: 3 element, first is .heart rectangle, 
+       then add .before rectange element, use radius 50% to create circular shape, use position-absolute + top -25px half the .heart height to add left half heart;
+	   then add .after rectange element, use radius 50% to create circular shape, use position-absolute + left -25px half the .heart width to add right half heart;
+       you can change different color and left/top value to see the change.
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			.moon
+			{
+			  position: relative;
+			  margin: auto;
+			  top: 0;
+			  right: 0;
+			  bottom: 0;
+			  left: 0;
+			  width: 100px;
+			  height: 100px;
+			  
+			  background-color: transparent;
+			  border-radius: 50%;
+			  box-shadow: 25px 10px 0px 0px blue; 
+			}
+			
+			.heart {
+			  position: relative;
+			  margin: auto;
+			  top: 200px;
+			  right: 0;
+			  bottom: 0;
+			  left: 0;
+			  background-color: pink;
+			  height: 50px;
+			  width: 50px;
+			  transform: rotate(-45deg);
+			}
+			
+			.heart:before {
+			  content: "";
+			  position: absolute;
+			  border-radius: 50%;
+			  background-color: pink;						
+			  width: 50px;
+			  height: 50px;
+			  top: -25px;
+			  left: 0px;
+			}
+
+			.heart:after {			  
+			  content: "";
+			  position: absolute;
+			  border-radius: 50%;
+			  background-color: pink;
+			  width: 50px;
+			  height: 50px;
+			  top: 0px;
+			  left: 25px;
+			}
+
+		</style>
+	</head>
+	
+	<body>
+		<div class="moon"></div>
+		<div class="heart"></div>
+	</body>
+</html>
