@@ -1,0 +1,35 @@
+
+<!-- 
+01. linear-gradient: linear-gradient(gradient_direction, color 1, color 2, color 3, ...);
+    for example: linear-gradient(90deg, red, yellow, rgb(204, 204, 255));
+02. transform: 
+    To change the scale of an element, transform: scale(1.2);
+    To rotate the element along its X/Y axis, transform: skewX(-32deg);
+-->
+
+
+<!DOCTYPE html>
+<html >
+	<head>
+        <style type="text/css">
+			  div { 
+				width: 70%;
+				height: 100px;
+				margin:  50px auto;
+				background: linear-gradient(
+				  53deg,
+				  #ccfffc,
+				  #cccccc,
+				  #ffcccf
+				);
+			  }
+			  
+			  div:hover {
+				transform: scale(1.2);
+			  }
+		</style>
+	</head>
+	<body>
+	   <div></div>
+	</body>
+</html>
