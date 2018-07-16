@@ -1,0 +1,80 @@
+<!--
+flexbox:
+
+flex-direction:
+justify-content:
+align-items:
+flex-wrap:
+
+flex-shrink
+flex-grow
+flex-basis
+align-self
+
+perfect center: set both justify-content and align-items to center.
+you can change value to see the effect
+-->
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			  #box-container {
+				background: gray;
+				display: flex;
+				height: 400px;
+				flex-direction: flow;
+				justify-content: space-between;
+				align-items: center;
+			  }
+			  #box-1 {
+				background-color: dodgerblue;
+				width: 200px;
+				height: 60%;
+				font-size: 24px;
+			  }
+
+			  #box-2 {
+				background-color: orangered;
+				width: 200px;
+				height: 100%;
+				font-size: 18px;				
+			  }
+			  
+			  #box-containerV {
+				background: gray;
+				display: flex;
+				height: 400px;
+				flex-direction: column;
+				justify-content: space-around;
+				align-items: flex-end;
+			  }
+			  #box-1V {
+				background-color: dodgerblue;
+				width: 200px;
+				height: 60%;
+				font-size: 24px;
+			  }
+
+			  #box-2V {
+				background-color: orangered;
+				width: 200px;
+				height: 20%;
+				font-size: 18px;
+			  }
+			  
+		</style>
+	</head>
+	<body>
+		<div id="box-container">
+		  <div id="box-1"><p>Hello</p></div>
+		  <div id="box-2"><p>Goodbye</p></div>
+		</div>
+		<hr>
+		<div id="box-containerV">
+		  <div id="box-1V"><p>Hello</p></div>
+		  <div id="box-2V"><p>Goodbye</p></div>
+		</div>
+	</body>
+</html>
