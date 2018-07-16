@@ -1,0 +1,89 @@
+<!--
+ make use of heart shape and animation to stimulate heart-beat
+ 
+ Question: when transform-scale .heart, you do not need to transform-scale .after and .before, it seems like .before and .after can change accordingly ?
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		  :root {
+			--heart-width: 200px;
+			--heart-height: 200px;
+			--before-pos: -100px;
+			--after-pos: 100px;
+		  }
+		
+		  .backgrd {
+			position: fixed;
+			padding: 0;
+			margin: 0;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: white;
+			animation-name: backdiv;
+			animation-duration: 1s; 
+			animation-iteration-count: infinite;
+		  }
+
+		  .heart {
+			position: absolute;
+			margin: auto;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: pink;
+			height: var(--heart-width, 50px);
+			width: var(--heart-height, 50px);
+			transform: rotate(-45deg);
+			animation-name: beat;
+			animation-duration: 1s;
+			animation-iteration-count: infinite;
+		  }
+		  .heart:after {
+			background-color: pink;
+			content: "";
+			border-radius: 50%;
+			position: absolute;
+			width: var(--heart-width, 50px);
+			height: var(--heart-height, 50px);
+			top: 0px;
+			left: var(--after-pos, 25px);
+		  }
+		  .heart:before {
+			background-color: pink;
+			content: "";
+			border-radius: 50%;
+			position: absolute;
+			width: var(--heart-width, 50px);
+			height: var(--heart-height, 50px);
+			top: var(--before-pos, -25px);
+			left: 0px;
+		  }
+		  
+		  @keyframes backdiv {
+			50% {
+			  background: #ffe6f2;
+			}
+		  }
+		  
+		  @keyframes beat {
+			0% {
+			  transform: scale(1) rotate(-45deg);
+			}
+			50% {
+			  transform: scale(0.6) rotate(-45deg);
+			}  
+		  }
+		</style>
+	</head>
+	
+	<body>
+		<div class="backgrd"></div>
+		<div class="heart"></div>
+	</body>
+</html>
