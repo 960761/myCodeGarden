@@ -1,0 +1,97 @@
+<!--
+use grid to design responsive layout:
+
+grid-template-areas:
+grid-area:
+@media:
+grids with grids
+
+the key is @media and grid-template-area
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		  .item1 {
+			background: LightSkyBlue;
+			grid-area: header;
+		  }
+		  
+		  .item2 {
+			background: LightSalmon;
+			grid-area: advert;
+		  }
+		  
+		  .item3 {
+			background: PaleTurquoise;
+			grid-area: content;
+			display: grid;
+
+		  }
+		  .itemOne {
+			background: PaleGreen;
+		  }		  
+		  .itemTwo {
+			background: BlanchedAlmond;
+			justify-self: center;
+			align-self: center;		
+		  }
+		  
+		  .item4 {
+			background: lightpink;
+			grid-area: footer;
+		  }
+		  
+            /*default layout*/
+		  .container {
+			font-size: 1.5em;
+			min-height: 300px;
+			width: 100%;
+			background: LightGray;
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: 50px auto 1fr auto;
+			grid-gap: 10px;
+			grid-template-areas:
+			  "header"
+			  "advert"
+			  "content"
+			  "footer";
+		  }
+		  
+          /* when width > 600px, use this layout, do not forgot to set columns 2 */
+		  @media (min-width: 600px){
+			.container{
+			  grid-template-columns: auto 1fr;
+			  grid-template-rows: auto 1fr auto;
+			  grid-template-areas:
+				"advert header"
+				"advert content"
+				"advert footer";
+			}
+		  }
+		  
+		  /* when width > 800px, use this layout, because if > 800px, actually use the above and the columns is already 2, if not ,need to set column 2 */
+		  @media (min-width: 800px){
+			.container{			
+			  grid-template-areas:
+				"header header"
+				"advert content"
+				"footer footer";
+			}
+		  }
+		</style>
+	</head>
+	<body>
+		<div class="container">
+		  <div class="item1">header</div>
+		  <div class="item2">advert</div>
+		  <div class="item3">
+			<div class="itemOne">paragraph1</div>
+			<div class="itemTwo">paragraph2</div>
+		  </div>
+		  <div class="item4">footer</div>
+		</div>
+	</body>
+</html>
