@@ -1,7 +1,7 @@
 ## Welcome to GitHub Pages
 
-### FCC responsive web design page demo
-https://github.com/960761/myCodeGarden/tree/master/FreeCodeCamp/responsiveWebDesign/readme.md
+### my Demo
+[responsive web design page demo](https://github.com/960761/myCodeGarden/tree/master/FreeCodeCamp/responsiveWebDesign/readme.md)
 
 
 ### lists of notes
