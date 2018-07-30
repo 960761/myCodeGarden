@@ -26,4 +26,10 @@ You can click below to see the html effect.
 [responsive layout with grid](https://960761.github.io/myCodeGarden/FreeCodeCamp/responsiveWebDesign/05_responsiveLayout.html)
 
 demo03_ProductPage:  
-[responsive layout with grid](https://960761.github.io/myCodeGarden/FreeCodeCamp/responsiveWebDesign/demo03_ProductPage.html)
+[Product Landing Page](https://960761.github.io/myCodeGarden/FreeCodeCamp/responsiveWebDesign/demo03_ProductPage.html)
+
+demo04_TechDocPage:  
+[Technical Documentation Page](https://960761.github.io/myCodeGarden/FreeCodeCamp/responsiveWebDesign/demo04_TechDocPage.html)
+
+demo05_PersonalPage:  
+[Personal Page](https://960761.github.io/myCodeGarden/FreeCodeCamp/responsiveWebDesign/demo05_PersonalPage.html)
