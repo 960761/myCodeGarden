@@ -1,0 +1,331 @@
+
+<!--
+Author: xin
+Date: 2018.7.24
+Theme: from FCC demo, product landing page
+Demo Link:  https://codepen.io/xin607/pen/JBWWGV
+
+First step should be:
+1. delete browser default style in order to define own style;
+2. set global element style, include: body, li, a and so on.
+
+Note:
+1. style web page step by step, part by part;
+2. flex box can be used to single element to perfect center;
+3. flex box is much more useful than you know, make good use of it.
+-->
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			
+			/******************************************* global element style ************************************/
+			/* delete any browser default style */
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+			
+			/******** first step: set body style, usually color and font-family *******/
+			body {
+				background-color: #eee;
+				font-family: 'Lato', sans-serif;
+				min-width: 600px; /* when view port less than 600px, do not change to auto adapt, use scroll  bar */
+			}
+			li {
+				list-style: none;
+			}
+			a {
+				text-decoration: none;
+				color: #000;
+			}
+			
+			/******************************************* header style ************************************/
+			
+			#header {
+				/*border: solid;*/
+				position: fixed;
+				top: 0;
+				width: 100%;
+				min-height: 75px;
+				background-color: #eee; /* set the same background color in order to make it no transparent */
+				padding: 0px 20px;
+				display: flex;
+				align-items: center;
+				justify-content: space-around;
+				/*z-index: 5; *//* if other set position, it will also overlay, so set z-index */
+			}
+			.logo {
+				width: 60vw;
+				/*border: solid blue;*/
+			}
+			.logo img {
+			    width: 100%;
+				height: 100%;
+				max-width: 300px;
+			}
+			
+			#nav-bar {
+				/*border: solid blue;*/
+				width: 35vw;
+			}
+			#nav-bar ul{
+				display: flex;
+				justify-content: space-around;
+				font-weight: bold;
+			}
+			
+			/******************************************* main style ************************************/
+			.container {
+				/*border: solid;*/
+				/*position: relative;*//* if set position, the content will overlay the fixed part, so need set fixed part z-index, or instead of position, use padding-top */
+				padding-top: 75px;
+				max-width: 1000px;
+				margin: 0 auto;					
+			}
+			
+			section {
+				/*border: solid 1px blue;*/
+			}
+			
+			#hero {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;			
+			}
+			#hero h2 {
+				margin: 20px 0px;
+			}
+			
+			/********* style form elements, if more than 2, can set form to flex box *******/
+			  input[type="email"] {
+				max-width: 275px;
+				width: 100%; /* set width to 100% can make it the whole row, like "br" effect in html */
+				padding: 5px;
+			  }
+
+			  input[type="submit"] {
+				max-width: 150px;
+				width: 100%;
+				height: 30px;
+				margin: 15px 0;
+				background-color: #f1c40f;
+			  }
+			  
+			  
+			/*  features block include three class .grid block ? justify only applies to the first grid class block, why? */
+			/*.grid {
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				flex-wrap: wrap;
+			}*/			
+			
+			/*  because grid class do not effect, use grid mode */
+			#features {
+				padding: 10px 0px;
+				display: grid;
+				grid-template-columns: 1fr 3fr;
+				justify-items: center;
+				align-items: center;
+				grid-row-gap: 20px;
+				line-height: 1.5em;
+				margin: 20px 0px;
+			}
+
+
+			/* only one element, use flex to horizon center */
+			#how-it-works{
+				display: flex;
+				justify-content: center;
+				padding:30px 0px;
+				margin: 20px 0px;
+			}
+			#video {
+				width: 80%;
+			}
+			
+			#pricing {
+				display: grid;
+				grid-template-columns:1fr 1fr 1fr;
+				grid-column-gap: 15px;
+				margin: 20px 0px;
+			}
+			#tenor, #bass, #valve {
+				margin: 10px 0px;
+				border: 1px solid;
+				line-height: 2;
+				display:flex;
+				flex-direction: column;
+				padding: 0px;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+			}
+			.level {
+				width: 100%;
+				background-color: #ddd;
+			}
+			.btn {
+				background-color: orange;
+				height: 30px;
+				width: 100px;
+				margin-bottom: 15px;
+			}
+			
+			/***************************************** footer style ************************************/
+			footer {
+				background-color: #ddd;
+				margin-top: 40px;
+				padding: 10px 0px;
+			}
+			footer ul {
+				display: flex;
+				justify-content: flex-end;
+				font-weight: bold;
+			}
+			footer li {
+				padding: 10px 15px;
+			}
+			footer span {
+				display: flex;
+				justify-content: flex-end;
+				padding: 5px 15px;
+			}
+			
+			/***************************************** responsive design ************************************/
+			@media (max-width: 800px) {
+				#header {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					min-height: 120px;
+				}
+				.logo {
+					display: flex;
+					justify-content: center;					
+				}
+				#nav-bar ul{
+					display: flex;
+					flex-direction: column;
+					justify-content: space-around;
+					align-items: center;
+			    }
+				
+				.container {
+					top: 120px;
+				}
+			}
+			
+		</style>
+	</head>
+	
+	<body>		
+
+		<header id="header">
+			  <div class="logo">
+				<img id="header-img" src="https://s3.amazonaws.com/freecodecamp/original_trombones.png" alt="original trombones logo" />
+			  </div>
+
+			  <nav id="nav-bar">
+				<ul>
+				  <li><a class="nav-link" href="#features">Features</a></li>
+				  <li><a class="nav-link" href="#how-it-works">How It Works</a></li>
+				  <li><a class="nav-link" href="#pricing">Pricing</a></li>
+				</ul>
+			  </nav>
+		</header>
+		  
+
+		<main class="container">
+			
+			<section id="hero">
+			  <h2>Handcrafted, home-made masterpieces</h2>
+			  <form id="form" action="https://www.freecodecamp.com/email-submit">
+				<input name="email" id="email" type="email" placeholder="Enter your email address" required/>
+				<input id="submit" type="submit" value="Get Started" class="btn"></input>
+			  </form>
+			</section>
+			
+			  <section id="features">
+				  <img src="fire.png"/>
+				  <div class="desc">
+					<h2>Premium Materials</h2>
+					<p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.</p>
+				  </div>
+
+				  <img src="truck.png"/>
+				  <div class="desc">
+					<h2>Fast Shipping</h2>
+					<p>We make sure you recieve your trombone as soon as we have finished making it. We also provide free returns if you are not satisfied.</p>
+				  </div>
+
+				  <img src="battery.png"/>
+				  <div class="desc">
+					<h2>Quality Assurance</h2>
+					<p>For every purchase you make, we will ensure there are no damages or faults and we will check and test the pitch of your instrument.</p>
+				  </div>
+			  </section>
+			  
+			  <section id="how-it-works">
+				<iframe id="video" height="315" src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+			  </section>
+			  
+			  <section id="pricing">
+				<div id="tenor">
+				  <div class="level">
+					Tenor Trombone
+				  </div>
+				  <h2>$600</h2>
+				  <ol>
+					<li>Lorem ipsum.</li>
+					<li>Lorem ipsum.</li>
+					<li>Lorem ipsum dolor.</li>
+					<li>Lorem ipsum.</li>
+				  </ol>
+				  <button class="btn">Select</button>
+				</div>
+				<div id="bass">
+				  <div class="level">
+					Bass Trombone
+				  </div>
+				  <h2>$900</h2>
+				  <ol>
+					<li>Lorem ipsum.</li>
+					<li>Lorem ipsum.</li>
+					<li>Lorem ipsum dolor.</li>
+					<li>Lorem ipsum.</li>
+				  </ol>
+				  <button class="btn">Select</button>
+				</div>
+				<div id="valve">
+				  <div class="level">
+					Valve Trombone
+				  </div>
+				  <h2>$1200</h2>
+				  <ol>
+					<li>Plays similar to a Trumpet</li>
+					<li>Great for Jazz Bands</li>
+					<li>Lorem ipsum dolor.</li>
+					<li>Lorem ipsum.</li>
+				  </ol>
+				  <button class="btn">Select</button>
+				</div>
+			  </section>			 
+		</main>	
+			
+		<footer>
+				<ul>
+				  <li><a href="#">Privacy</a></li>
+				  <li><a href="#">Terms</a></li>
+				  <li><a href="#">Contact</a></li>
+				</ul>
+				<span>Copyright 2016, Original Trombones</span>
+		</footer>			
+
+	</body>
+</html>
