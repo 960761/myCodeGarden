@@ -1,6 +1,6 @@
 ### 关于 Object Oriented programming：
 
-1.	继承inheritance  
+**1.	继承inheritance**  
 创建 super type Animal, child type Bird 
 ```
 function Animal() { } // super type
@@ -23,7 +23,7 @@ Bird.prototype.eat = function() {
   return "peck peck peck";
 };
 ```
-2.	闭包 closure  
+**2.	闭包 closure**  
 因为java script中没有 block 域的概念，所以变量只有 global scope, function scope两种，因此通过正常途径（constructor, or add）得到的object property都是公开的也即外面可以进行修改的，若想其property为私有的，禁止外界修改的，可以将其定义在constructor里，然后定义一个函数获取它：
  ```
  function Bird() {
@@ -38,7 +38,7 @@ ducky.getHat (); // returns 10
 
 In JavaScript, a function always has access to the context in which it was created. This is called closure.
 ```
-3.	模式 module  
+**3.	模式 module**  
 自激发函数IIFE：Immediately Invoke Function Expression
 不用被调用，声明之后就立即会执行，一般的语法形式为：
 ```
@@ -92,9 +92,9 @@ duck.glide();
 ### 关于 Functional programming:
 这一部分讲的并非 函数式编程，而是 利用 函数解决问题的思路，也即将一个大问题分解成多个小问题，每个小问题使用独立的函数进行解决。
 使用function的两个原则：
-1) Don't alter a variable or object - create new variables and objects and return them if need be from a function.  
+**1) Don't alter a variable or object - create new variables and objects and return them if need be from a function.**  
 不要改变传入的参数和全局变量，在函数内部新创建变量并用于处理并返回。
-2) Declare function arguments - any computation inside a function depends only on the arguments, and not on any global object or variable.  
+**2) Declare function arguments - any computation inside a function depends only on the arguments, and not on any global object or variable.**  
 函数中需要用到的变量都作为参数传入，减少对外部的依赖关系。
 
 此外还练习了一些array 中high order function 的使用：  
