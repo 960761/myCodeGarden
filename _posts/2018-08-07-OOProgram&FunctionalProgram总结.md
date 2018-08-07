@@ -35,9 +35,9 @@ Bird.prototype.eat = function() {
 }
 let ducky = new Bird();
 ducky.getHat (); // returns 10
-
+```
 In JavaScript, a function always has access to the context in which it was created. This is called closure.
-  ```
+  
 **3.	模式 module**  
 自激发函数IIFE：Immediately Invoke Function Expression
 不用被调用，声明之后就立即会执行，一般的语法形式为：
