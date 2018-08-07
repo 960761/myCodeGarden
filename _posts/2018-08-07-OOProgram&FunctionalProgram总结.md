@@ -91,9 +91,11 @@ duck.glide();
 
 ### 关于 Functional programming:
 这一部分讲的并非 函数式编程，而是 利用 函数解决问题的思路，也即将一个大问题分解成多个小问题，每个小问题使用独立的函数进行解决。
-使用function的两个原则：  
+使用function的两个原则：
+
 **1) Don't alter a variable or object - create new variables and objects and return them if need be from a function.**  
-不要改变传入的参数和全局变量，在函数内部新创建变量并用于处理并返回。  
+不要改变传入的参数和全局变量，在函数内部新创建变量并用于处理并返回。
+
 **2) Declare function arguments - any computation inside a function depends only on the arguments, and not on any global object or variable.**  
 函数中需要用到的变量都作为参数传入，减少对外部的依赖关系。
 
