@@ -2,7 +2,7 @@
 
 ## Demo 
 task01 任务要求地址：
-<https://github.com/960761/myCodeGarden/blob/master/baiduIFE/2016-spring/part1/task01/task01.md><br>
+<https://github.com/960761/myCodeGarden/blob/master/baiduIFE/2016-spring/part1/task01/task01.md>  
 task01 在线预览地址：<https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part1/task01/task01.html>
 
 task02 任务要求地址：<https://github.com/pkjy/ife-task/blob/gh-pages/2016_spring/part1/task02.md><br>
