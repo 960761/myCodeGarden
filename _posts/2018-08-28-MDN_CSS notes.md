@@ -23,7 +23,7 @@ o	@document 只有当前页面匹配一些条件时才会应用该@-规则的内
 4.	注释  
 CSS中的注释以 /* 开始并以 */ 结束。HTML中的注释则是 <!--comment--> 
 5.	CSS选择器分类
- 
+ ![结构](https://github.com/960761/myCodeGarden/blob/master/_posts/img/selector.png)
 6.	通用选择器 * 会使得网页显示比预期要慢，因此要慎重使用。
 7.	存在和值属性（presence and value）选择器
 [attr]：该选择器选择包含 attr 属性的所有元素，不论 attr 的值为何。  
