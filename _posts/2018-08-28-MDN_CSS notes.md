@@ -1,8 +1,9 @@
 MDN CSS notes:
 Task 01: github done.
 Task 02: 初始CSS
-1.	CSS工作原理：
+1.	CSS工作原理：  
 HTML+ CSS = DOM
+![结构](https://github.com/960761/myCodeGarden/blob/master/_posts/img/cssWork.png)
  
 2.	CSS中无效语句处理
 如果使用了未知属性，或者给属性赋予了无效值，该声明会被视为无效，浏览器的 CSS 引擎会完全忽略它。如果CSS选择器中使用的链或组，如果链或组中的某个选择器无效，比如使用了未知的伪元素或伪类，整个组的选择器仍然是有效的，除了这个无效的将被忽略的选择器。 
@@ -123,6 +124,7 @@ text-shadow属性允许将一个或多个阴影应用到元素的文本上。对
 
 22.	Flexbox 弹性盒子布局
 模型术语：
+![结构](https://github.com/960761/myCodeGarden/blob/master/_posts/img/flex.png)
 一个无单位的比例值，表示每个 flex 项沿主轴的可用空间大小。
 还可以指定 flex 的最小值
  
