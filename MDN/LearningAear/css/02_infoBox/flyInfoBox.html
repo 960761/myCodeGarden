@@ -1,0 +1,88 @@
+<!--
+Author: xin
+Date: 2018.8.27
+Description: use checkbox hack technology to implement fly-info-box
+Link: https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Practical_positioning_examples  demo 03
+Checkbox hack: https://css-tricks.com/the-checkbox-hack/
+-->
+
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<title>Hidden info panel</title>
+
+  <style>
+    body{
+	  background-color: #ccc;
+	}
+    label[for="toggle"] {
+	  font-size: 3rem;
+	  position: fixed;
+	  top: 4px;
+	  right: 5px;
+	  z-index: 1;
+	  cursor: pointer;
+	}
+
+	input[type="checkbox"] {
+	  position: fixed;
+	  top: -100px; /* checkbox hack technology, cannot see it */
+	}
+	
+	aside {
+	  background-color: #a60000;
+	  color: white;
+
+	  width: 340px;
+	  height: 98%;
+	  padding: 10px 1%;
+
+	  position: fixed;
+	  top: 0;
+	  right: -370px;
+
+	  transition: 0.6s all;
+	}
+	
+	/* !!!Important */
+	input[type=checkbox]:checked + aside {
+	  right: 0px;
+	}
+	
+	.content {
+	  width: 85%;
+	  height:1500px;
+	  background-color: #ab0000;
+	}
+  </style>
+	
+</head>
+<body>
+
+
+  <label for="toggle">❔</label>
+  <input type="checkbox" id="toggle">
+  <aside>
+    <h2>Information</h2>
+
+    <p>Some very important information about your app:</p>
+
+    <ol>
+      <li>It has a really cool slide-out information box.</li>
+      <li>This information box uses a combination of fixed positioning and a CSS transition for the smooth sliding.</li>
+      <li>It also uses a cool technique called the <a href="https://css-tricks.com/the-checkbox-hack/">checkbox hack</a>.</li>
+      <li>This allows you to create a nice "toggle on/toggle off" UI effect without using any JavaScript, 
+	  which will work in IE9 and above (the smooth transition will work in IE10 and above.)</li>
+    </ol>
+
+  </aside>
+  <div class="content">
+  	  <p>This is fake content. Your main web page contents would probably go here.</p>
+	  <p>This is fake content. Your main web page contents would probably go here.</p>
+	  <p>This is fake content. Your main web page contents would probably go here.</p>
+	  <p>This is fake content. Your main web page contents would probably go here.</p>
+  </div>
+</body>
+</html>
