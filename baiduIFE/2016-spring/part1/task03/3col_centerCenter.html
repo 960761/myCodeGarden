@@ -1,0 +1,54 @@
+<!--
+Author: xin
+Date: 2018.8.29
+Description: 3 column layout by float , html-orgin order, left-center-right
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+	.wrapper{
+		background-color:#eee;
+	}
+	.wrapper::after{
+		  content:"";
+		  display:block;
+		  clear:both;
+	}
+		
+    .content {
+  	      float: left;
+  	      width: 100%;
+    }
+    .main {
+  	    margin-left: 220px;
+  	    margin-right: 170px;
+  	    background-color: lightblue;
+    }
+		
+	.left {
+	    float: left;
+	    width: 200px;
+        margin-right: -200px;/* negative margin will create empty region ,so  the other float ele(here center) can overlay it */
+	    background-color: red;
+	}
+	.right {
+		float: left;
+	    margin-left: -150px;
+	    width: 150px;
+	    background-color: gray;
+	}	
+    </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="left">left, 宽度固定，高度可固定也可由内容撑开</div> 
+    <div class="content">
+        <div class="main">center, 宽度自适应浏览器宽度，高度可固定也可由内容撑开
+    </div>
+    </div>
+    <div class="right">right, 宽度固定，高度可固定也可由内容撑开</div>
+  </div>
+</body>
+</html>
