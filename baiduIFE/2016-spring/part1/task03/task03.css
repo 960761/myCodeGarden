@@ -1,0 +1,106 @@
+/*
+Author: xin
+Date: 2018.8.29
+Description: 3-column layout style
+*/
+
+
+/******************************************************** general style ***************************************************/
+body{
+  min-width: 400px;
+  font-family: "Microsoft Yahei";
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+li{
+  list-style-type: none;
+}
+
+.left-part, .mid-part, .right-part{
+  border: 1px solid gray;
+  box-sizing: border-box; /* prevent padding and margin change box width */
+}
+
+.wrapper{
+  background-color: #eee; 
+  margin: 10px;
+}
+img{
+  width: 80px;
+  height: 80px;
+}
+
+/******************************************************** 3-col layout ***************************************************/
+
+/**** absolute position ****/
+/* cannot solve height collapse issue */
+/*.wrapper {
+  position: relative;
+  top: 0;
+}
+.left-part{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200px;
+}
+.right-part{
+  position: absolute;
+  right: 0;
+  top:0;
+  width: 120px;
+}
+.mid-part{
+  position: absolute;
+  left: 200px;
+  right: 120px;
+}*/
+
+
+/**** flex for IE10+ ****/
+/*initial all columns have same height, so set align-items=flex-start to have different height*/
+.wrapper{
+  display: flex;
+  align-items: flex-start; 
+}
+.left-part{
+  flex: 0 0 170px;/* should subtract margin */
+}
+.right-part{
+  flex: 0 0 90px;
+}
+.mid-part{
+  flex: 1 1 auto;
+}
+
+/****grid****/
+/*.wrapper{
+  display: grid;
+  grid-template-columns:200px auto 120px;
+  align-items:start;
+}*/
+
+/******************************************************** individual style ***************************************************/
+.left-part {
+  margin: 15px;
+  padding: 10px;
+  background-color: white;
+}
+.left-part span{
+  float: right;
+  width: 30%;
+}
+.right-part{
+  margin:15px;
+  padding: 10px;
+  background-color: white;
+}
+
+.mid-part{
+  margin:15px 20px;
+  padding: 15px;
+  background-color: white;
+  line-height: 1.5;
+}
