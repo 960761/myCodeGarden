@@ -1,0 +1,57 @@
+
+<!--
+Author: xin
+Date: 2018.8.29
+Description: 3 column layout by float , html-center column first
+
+•如果对一个浮动的元素使用负边距，它会产生一个空白，其他元素(must float element)就可以覆盖这一部分。
+•当margin-top、margin-left为负值的时候，会把元素上移、左移，同时文档流中的位置也发生相应变化,
+•当margin-bottom、margin-right设为负值的时候，元素本身没有位置变化，后面的元素会下移、右移
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+	.wrapper{
+	    background-color: #eee;
+	}
+	.wrapper::after{
+	    content:"";
+		display:block;
+		clear:both;
+	}
+	
+    .content {
+  	    float: left;
+  	    width: 100%;
+    }
+    .main {
+  	    margin-left: 220px;
+  	    margin-right: 170px;
+  	    background-color: lightblue;
+    }
+	.left {
+	    float: left;
+	    margin-left: -100%;		
+	    width: 200px;
+	    background-color: red;
+	}
+	.right {
+	    float: left; /* here float right and float left have same effect, not see why? */
+	    margin-left: -150px;
+	    width: 150px;		
+	    background-color: gray;
+	}	
+    </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="content">
+        <div class="main">center, 宽度自适应浏览器宽度，高度可固定也可由内容撑开</div>
+    </div>
+    <div class="left">left, 宽度固定，高度可固定也可由内容撑开</div>
+    <div class="right">right, 宽度固定，高度可固定也可由内容撑开</div>
+  </div>
+</body>
+</html>
