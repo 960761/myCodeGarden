@@ -97,64 +97,70 @@ Link, visited, focus, hover, active
 为了避免这种问题，可以使用属性box-sizing调整盒模型，将其设置为 border-box，  
 这个时候所设置的width, height值就是 content + border + padding的值，而不再只是content的值。  
 ### 16.	Display分类
-Display实际上有很多种，但是常见的有三种： block, inline, inline-block;  
-行内块盒（inline-block box）介于前两者之间： 它会像行内盒一样，跟随周围的文本流堆放，不会在其前后创建换行；不过，它可以像块盒一样，使用宽度和高度设置大小，并且维护其块完整性 — 它不会跨段落行换行（对于一行文本容纳不下的行内盒，会落到第二行上，因为第一行上没有足够的空间容纳它，并且不会跨两行换行）  
-另外还有一些功能比较强大的，如table, flex, grid：  
+Display实际上有很多种，但是常见的有三种： block, inline, inline-block;    
+行内块盒（inline-block box）介于前两者之间： 它会像行内盒一样，跟随周围的文本流堆放，不会在其前后创建换行；不过，它可以像块盒一样，使用宽度和高度设置大小，并且维护其块完整性 — 它不会跨段落行换行（对于一行文本容纳不下的行内盒，会落到第二行上，因为第一行上没有足够的空间容纳它，并且不会跨两行换行）    
+另外还有一些功能比较强大的，如table, flex, grid：    
 display: table — 允许你像处理table布局那样处理非table元素，而不是滥用HTML的<table>标签来达到同样的目的。    
 display: flex — 允许你处理一些困扰CSS已久的一些传统布局问题，例如布置一系列弹性等宽容器或者垂直居中内容。    
 display: grid — 给出一种简单实现CSS网格系统的方式，而在传统上它依赖于一些棘手难以处理的CSS网格框架，    
-17.	背景
-多背景是在IE9之后才被支持的，如果在老的浏览器中想要采用多背景，必须使用多层div来完成。
-background-image还有另一组可用的值——颜色渐变，渐变就是在背景中平滑的颜色过渡。动态生成的渐变是在不久之前引入的，这是因为在web设计中使用渐变是非常受欢迎的，但是使用背景图像来实现渐变是相当不灵活的。目前有两种类型的渐变——线性渐变(从一条直线到另一条直线)和径向渐变(从一个点发散出来)。
-线性渐变是通过linear-gradient()函数传入的，它是一个background-image属性的值。函数至少需要用逗号分隔的三个参数——背景中渐变的方向，开始的颜色和结尾的颜色，如：
-   background-image: linear-gradient(to bottom, orange, yellow);
-background-size属性可以用来动态改变背景图像的大小，也是在IE9才开始支持的，旧浏览器不支持。
-18.	边界border
-圆角边界可以使用border-radius来实现，这是在IE9中才开始支持，对于旧的浏览器，要想实现圆角边界，需要使用多层div使用不同的背景图像来实现。还可以创建椭圆形角（x半径与y半径不同）。两个不同的半径用正斜杠（/）分隔即可。  
-/* 1st value is top left and bottom right corners,  
-   2nd value is top right and bottom left  */  
-border-radius: 20px 10px;  
-/* 1st value is top left corner, 2nd value is top right 
-   and bottom left, 3rd value is bottom right  */  
-border-radius: 20px 10px 50px;  
+### 17.	背景
+多背景是在IE9之后才被支持的，如果在老的浏览器中想要采用多背景，必须使用多层div来完成。  
+background-image还有另一组可用的值——颜色渐变，渐变就是在背景中平滑的颜色过渡。动态生成的渐变是在不久之前引入的，这是因为在web设计中使用渐变是非常受欢迎的，但是使用背景图像来实现渐变是相当不灵活的。目前有两种类型的渐变——线性渐变(从一条直线到另一条直线)和径向渐变(从一个点发散出来)。  
+线性渐变是通过linear-gradient()函数传入的，它是一个background-image属性的值。函数至少需要用逗号分隔的三个参数——背景中渐变的方向，开始的颜色和结尾的颜色，如：  
+   background-image: linear-gradient(to bottom, orange, yellow);  
+background-size属性可以用来动态改变背景图像的大小，也是在IE9才开始支持的，旧浏览器不支持。  
+### 18.	边界border
+圆角边界可以使用border-radius来实现，这是在IE9中才开始支持，对于旧的浏览器，要想实现圆角边界，需要使用多层div使用不同的背景图像来实现。  
+还可以创建椭圆形角（x半径与y半径不同）。两个不同的半径用正斜杠（/）分隔即可。    
+/* 1st value is top left and bottom right corners,    
+   2nd value is top right and bottom left  */    
+border-radius: 20px 10px;    
+/* 1st value is top left corner, 2nd value is top right   
+   and bottom left, 3rd value is bottom right  */    
+border-radius: 20px 10px 50px;    
 /* top left, top right, bottom right, bottom left */  
 border-radius: 20px 10px 50px 0;  
-在最新的浏览器（IE11）中支持边界图像： border-image，在旧浏览器中，也是利用多层重叠背景来实现，border-image属性在实现原理和使用上面都是有些复杂的。
-19.	Table样式
-使用 table-layout: fixed 创建更可预测的表布局，可以通过在标题width中设置width来轻松设置列的宽度。  
-使用 border-collapse: collapse 使表元素边框合并，生成一个更整洁、更易于控制的外观。  
-使用thead, tbody和tfoot 将表格分割成逻辑块，  
-使用斑马线来让其他行更容易阅读,here set tbody  tr background image noise.png  
-使用 text-align直线对齐您的th和td文本，使内容更整洁、更易于跟随。  
+在最新的浏览器（IE11）中支持边界图像： border-image，在旧浏览器中，也是利用多层重叠背景来实现，  
+border-image属性在实现原理和使用上面都是有些复杂的。  
+### 19.	Table样式
+使用 table-layout: fixed 创建更可预测的表布局，可以通过在标题width中设置width来轻松设置列的宽度。    
+使用 border-collapse: collapse 使表元素边框合并，生成一个更整洁、更易于控制的外观。    
+使用thead, tbody和tfoot 将表格分割成逻辑块，    
+使用斑马线来让其他行更容易阅读,here set tbody  tr background image noise.png    
+使用 text-align直线对齐您的th和td文本，使内容更整洁、更易于跟随。    
   
-20.	阴影
-text-shadow属性允许将一个或多个阴影应用到元素的文本上。对于盒子来说，存在一个等价的属性——box-shadow允许将一个或多个阴影应用到一个实际的元素盒子中。这两个都是在IE9+才支持。也可以指定多个阴影，使用逗号分隔。
-  两个里面都有四个值：box-shadow: 5px 5px 5px rgba(0,0,0,0.7);  
-    第一个长度值是水平偏移量（horizontal offset ）——即向右的距离，阴影被从原始的框中偏移(如果值为负的话则为左)。  
-    第二个长度值是垂直偏移量（vertical offset）——即阴影从原始盒子中向下偏移的距离(或向上，如果值为负)。  
-    第三个长度的值是模糊半径（blur radius）——在阴影中应用的模糊度。  
-颜色值是阴影的基本颜色（base color）。  
-对于box-shadow而言，还有一个区别与text-shadow的地方，在偏移量之前可以有inset/outset可选。
+### 20.	阴影
+text-shadow属性允许将一个或多个阴影应用到元素的文本上。  
+对于盒子来说，存在一个等价的属性——box-shadow允许将一个或多个阴影应用到一个实际的元素盒子中。  
+这两个都是在IE9+才支持。也可以指定多个阴影，使用逗号分隔。  
+  两个里面都有四个值：box-shadow: 5px 5px 5px rgba(0,0,0,0.7);    
+    第一个长度值是水平偏移量（horizontal offset ）——即向右的距离，阴影被从原始的框中偏移(如果值为负的话则为左)。    
+    第二个长度值是垂直偏移量（vertical offset）——即阴影从原始盒子中向下偏移的距离(或向上，如果值为负)。    
+    第三个长度的值是模糊半径（blur radius）——在阴影中应用的模糊度。    
+颜色值是阴影的基本颜色（base color）。    
+对于box-shadow而言，还有一个区别与text-shadow的地方，在偏移量之前可以有inset/outset可选。  
 
-21.	使用浮动来实现页面布局，
-浮动元素存在于正常的文档布局流之外，因此导致在某些方面行为怪异，首先，他们在父元素中所占的面积有效高度为0；其次，非浮动元素的外边距不能用于它们和浮动元素之间创建空间。
-       浮动经常用来实现页面布局，因为它可以很好的被旧的浏览器支持，但是也有一些副作用需要克服。
-一个问题是宽度计算问题，比如添加padding, margin等样式时会容易导致总宽度过大而使得其中Float部分被挤到下一行。这个问题可以通过box-sizing为border-box更改盒模型来解决，这只适用于IE8+，盒子的宽度取值为 content + padding + border，而不仅是之前的content——所以当增加内边距或边界的宽度时，不会使盒子更宽——而是会使内容调整得更窄。
-解决“其次”问题的方法，创建一个空白的div，设置其clear:both，放到浮动元素和需要和浮动元素垂直保持距离的元素之间，这样，位于此空白div下面的元素设置Margin就是起作用的了。
+### 21.	使用浮动来实现页面布局，
+浮动元素存在于正常的文档布局流之外，因此导致在某些方面行为怪异，
+首先，他们在父元素中所占的面积有效高度为0；其次，非浮动元素的外边距不能用于它们和浮动元素之间创建空间。  
+       浮动经常用来实现页面布局，因为它可以很好的被旧的浏览器支持，但是也有一些副作用需要克服。  
+一个问题是宽度计算问题，比如添加padding, margin等样式时会容易导致总宽度过大而使得其中Float部分被挤到下一行。这个问题可以通过box-sizing为border-box更改盒模型来解决，这只适用于IE8+，盒子的宽度取值为 content + padding + border，而不仅是之前的content——所以当增加内边距或边界的宽度时，不会使盒子更宽——而是会使内容调整得更窄。  
+解决“其次”问题的方法，创建一个空白的div，设置其clear:both，放到浮动元素和需要和浮动元素垂直保持距离的元素之间，这样，位于此空白div下面的元素设置Margin就是起作用的了。  
 多列布局时，还会出现列的高度不同的情况，这个时候可以将各浮动列设置相同的高度，或将背景设置为父元素的背景以遮挡列的高度不同。
 
-22.	Flexbox 弹性盒子布局
+### 22.	Flexbox 弹性盒子布局
 模型术语：
 ![结构](https://github.com/960761/myCodeGarden/blob/master/_posts/img/flex.png)
-一个无单位的比例值，表示每个 flex 项沿主轴的可用空间大小。
-还可以指定 flex 的最小值
- 
+一个无单位的比例值，表示每个 flex 项沿主轴的可用空间大小。  
+还可以指定 flex 的最小值  
+`
 article {
   flex: 1 200px;
 }
 article:nth-of-type(3) {
   flex: 2 200px;
 }
-这表示“每个flex 项将首先给出200px的可用空间，然后，剩余的可用空间将根据分配的比例共享“。
-更多更高级功能参考https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox
+`
+这表示“每个flex 项将首先给出200px的可用空间，然后，剩余的可用空间将根据分配的比例共享“。  
+更多更高级功能参考https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox  
 
