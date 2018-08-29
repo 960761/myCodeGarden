@@ -8,6 +8,10 @@ You can use the [editor on GitHub](https://github.com/960761/myCodeGarden/edit/m
 
 [FCC-JS algorithm and data structure demo](https://github.com/960761/myCodeGarden/tree/master/FreeCodeCamp/JS_AlgorithmAndDataStructure/)
 
+[MDN-CSS](https://github.com/960761/myCodeGarden/tree/master/MDN/LearningAear/css/)
+
+[baiduIFE](https://github.com/960761/myCodeGarden/tree/master/baiduIFE/)
+
 ### lists of notes
 
 
