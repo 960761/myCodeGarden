@@ -1,0 +1,94 @@
+
+<!--
+Author: xin
+Date: 2018.8.30
+Des: center in CSS 
+For more info, refer to:
+https://css-tricks.com/centering-css-complete-guide/
+http://howtocenterincss.com/
+
+NOTES:
+1. horizon center 
+   margin: 0 auto; only apply to position relative, must before other margin set, or will overlay other margin sets
+   left: 50vw(half parent element width), margin-left: -1/2*box-width apply to both relative and absolute;
+   
+2. vertical center
+   top: 50vh(half parent element height), margin-top: -1/2*box-height apply to both reltive and absolute;
+   
+3. 50vw can be replaced by 50%, between width is default 100% screenwidth
+   but, 50vh cannot be replaced by 50%, becaute height is default content height, if no content, height is 0
+-->
+
+<!Doctype html>
+<html>
+  <head>
+    <title>task04 position and center</title>
+	<style>
+	  *{
+	    padding: 0;
+		margin: 0;
+	  }
+      /*
+	  .parent{
+	    height: 100vh;
+		width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+	  }
+	  .center{
+        position: relative;
+	    width: 400px;
+		height: 200px;
+        overflow: hidden;
+		background-color: #ccc;		
+	  }*/
+
+	  .parent{
+	    height: 100vh;
+		width: 100vw;
+	  }
+	  .center{
+	    position: relative;/*absolute and relative both work*/
+	    width: 400px;
+		height: 200px;
+        /*margin: 0 auto;*/		
+		top:50%; 
+		margin-top: -100px;
+        left:50%;		
+        margin-left: -200px;
+        background-color: #ccc;
+        overflow: hidden;		
+	  }	  
+	  
+	  .topLCircle{
+	    position: absolute;
+		width:60px;
+		height: 60px;
+		top: -30px;
+		left: -30px;
+		border-radius:30px;
+		background-color: yellow;
+	  }
+	  .bottomRCircle{
+	    position: absolute;
+		width:60px;
+		height: 60px;
+		bottom: -30px;
+		right: -30px;
+		border-radius:30px;
+		background-color: yellow;
+	  }
+	</style>
+  </head>
+  
+  <body>
+    <div class="parent">
+		<div class="center">
+			<div class="topLCircle"></div>
+			<div class="bottomRCircle"></div>	
+		</div>
+	</div>
+  </body>
+</html>
+
