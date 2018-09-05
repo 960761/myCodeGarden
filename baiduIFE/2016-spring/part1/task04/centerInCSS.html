@@ -1,0 +1,125 @@
+
+<!--
+Author: xin
+Date: 2018.8.30
+Des: all kinds of center in CSS
+link: https://css-tricks.com/centering-css-complete-guide/
+-->
+
+<!Doctype html>
+<html>
+  <head>
+    <title>center in CSS</title>
+    <link href="centerInCSS.css" type="text/css" rel="stylesheet" >
+  </head>
+  <body>
+    <!-- 01 horizon inline element-->
+    <h3>01 horizon center inline element</h3>
+    <p class="hCenterInline">
+	  This text is centered.
+	</p>
+	<div class="hCenterInline2">
+	  <a href="#0">One</a>
+	  <a href="#0">Two</a>
+	  <a href="#0">Three</a>
+	  <a href="#0">Four</a>
+	</div> 
+	<hr>
+	
+	<!-- 02 horizon block -->
+	<h3>02 horizon center single block element</h3>
+	<div class="centerBlock">
+    I'm a block level element and am centered.
+    </div>
+	
+	<!-- 03 many block elements -->
+	<h3>03 horizon center many block elements</h3>
+	<div class="block-center-inline">
+	  <div>
+		I'm an element that is block-like with my siblings and we're centered in a row.
+	  </div>
+	  <div>
+		I'm an element that is block-like with my siblings and we're centered in a row. I have more content in me than my siblings do.
+	  </div>
+	  <div>
+		I'm an element that is block-like with my siblings and we're centered in a row.
+	  </div>
+	</div>
+	<hr>
+	<div class="block-center-flex">
+	  <div>
+		I'm an element that is block-like with my siblings and we're centered in a row.
+	  </div>
+	  <div>
+		I'm an element that is block-like with my siblings and we're centered in a row. I have more content in me than my siblings do.
+	  </div>
+	  <div>
+		I'm an element that is block-like with my siblings and we're centered in a row.
+	  </div>
+	</div>
+	<hr>
+	
+	<!-- 04 vertical center inline -->
+	<h3>04 vertical center inline element</h3>
+	<div class="vCenter">
+	  <a href="#0">We're</a>
+	  <a href="#0">Centered</a>
+	  <a href="#0">Bits of</a>
+	  <a href="#0">Text</a>
+	</div>
+	<hr>
+	
+	<!-- 05 vertical center multiple lines -->
+	<h3>05 vertical center multi-line</h3>
+	<div class="vCenter2">
+	  <span>I'm vertically centered multiple lines of text.</span>
+	</div>
+	<hr>
+	
+	<!-- 06 vertical center block with height -->
+	<h3>06 vertical center block with height</h3>
+	<div class="outer1">	  
+	  <div class="inner1">
+		 I'm a block-level element with a fixed height, centered vertically within my parent.
+	  </div>	  
+	</div>
+	<hr>
+	
+	<!-- 07 vertical center block with unknown height -->
+	<h3>07 vertical center block with unknown height</h3>
+    <div class="outer2">	  
+	  <div class="inner2">
+		 I'm a block-level element with unknown height, centered vertically within my parent.
+	  </div>	  
+	</div>
+	<hr>
+	
+	<!-- 08 both center block with height and width -->
+	<h3>08 vertical and horizon center block with size</h3>
+	<div class="outer3">	  
+	  <div class="inner3">
+		 I'm a block-level element with a fixed height, centered vertically and horizontally within my parent.
+	  </div>	  
+	</div>
+	<hr>
+	
+	<!-- 09 both center block with unknown height and width -->
+	<h3>09 vertical and horizon center block without size</h3>
+    <div class="outer4">	  
+	  <div class="inner4">
+		 I'm a block-level element with unknown height, centered vertically and horizontally within my parent.
+	  </div>	  
+	</div>	
+	<hr>
+	
+	<!-- 10 both center block with unknown or known size -->
+	<h3>10 vertical and horizon center block with or without size</h3>
+    <div class="outer5">	  
+	  <div class="inner5">
+		 I'm a block-level element, centered vertically and horizontally within my parent with flex, no matter I have or not have size.
+	  </div>	  
+	</div>	
+	
+  </body>
+</html>
+
