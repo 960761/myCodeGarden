@@ -1,0 +1,70 @@
+
+<!--
+Author: xin
+Date: 2018.9.5
+Description: 2 column layout by float, no matter whether aside left or right, put content before aside part
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+	  .wrapper{
+	    background-color: #ccc;
+	    border: solid red;
+	  }
+	  .wrapper::after{
+	    content:"";
+		display: block;
+		clear:both;
+	  }
+	  
+	  /******  aside left ******/
+	  /*.main{
+	    float: left;
+		width: 100%;
+	  }
+	  .content{
+	    margin-left: 220px;
+	    background-color: lightblue;
+		border: solid blue;
+	  }
+	  .aside{
+	    float: left;
+		width: 200px;
+		margin-left: -100%;
+		background-color: gray;
+		border: solid blue;
+	  }	*/  	  
+	  
+	  /******  aside right ******/	  
+	  .main{
+	    float: left;
+		width: 100%;
+	  }
+	  .content{
+	    margin-right: 220px;
+	    background-color: lightblue;
+		border: solid blue;
+	  }
+	  .aside{
+	    float: right;
+		width: 200px;
+		margin-left: -210px;
+		background-color: gray;
+		border: solid blue;
+	  }	  
+	  	  
+    </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="main">
+      <div class="content">main content, 宽度react to screen width，高度可固定也可由内容撑开,度react to screen width，
+	  </div> 
+    </div>
+    <div class="aside">aside, 宽度固定，高度可固定也可由内容撑开</div>   
+  </div>
+</body>
+</html>
+
