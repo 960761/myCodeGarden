@@ -14,7 +14,7 @@
 
 [task04 任务要求](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part1/task04/task04.md)  
 [task04 在线预览](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part1/task04/task04.html) 
-[居中实现原理](https://github.com/960761/myCodeGarden/blob/master/_posts/2018-09-06-CSS中的居中实现.md)  
+[居中实现原理](https://github.com/960761/myCodeGarden/blob/master/_posts/2018-09-06-CSS中的居中实现.md)    
 [居中实现预览](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part1/task04/centerInCSS.html)  
 
 [task05 任务要求](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part1/task05/task05.md)    
