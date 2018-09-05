@@ -12,11 +12,11 @@
 [三列布局float实现原理](https://github.com/960761/myCodeGarden/blob/master/_posts/2018-08-29-使用float实现三列布局.md)  
 [三列布局float实现预览](https://960761.github.io//myCodeGarden/baiduIFE/2016-spring/part1/task03/3col_centerFirst.html)  
 
-[task04 任务要求]<https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part1/task04/task04.html>
-[task04 在线预览]<https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part1/task04/task04.md>
+[task04 任务要求](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part1/task04/task04.html)  
+[task04 在线预览](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part1/task04/task04.md)  
 
-[task05 任务要求]<https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part1/task05/task05.html>
-[task05 在线预览]<https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part1/task05/task05.md>
+[task05 任务要求](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part1/task05/task05.html)  
+[task05 在线预览](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part1/task05/task05.md)  
 
 task07 任务要求地址：<https://github.com/pkjy/ife-task/blob/gh-pages/2016_spring/part1/task07.md><br>
 task07 在线预览地址：<http://pkjy.github.io/ife-task/2016_spring/part1/task07.html>
