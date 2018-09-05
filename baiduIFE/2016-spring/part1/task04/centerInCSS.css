@@ -1,0 +1,194 @@
+/*
+Author: xin
+Date: 2018.8.30
+Des: all kinds of center in CSS
+link: https://css-tricks.com/centering-css-complete-guide/
+*/
+
+  body{
+	background-color: #eee;
+  }
+  h3{
+	color: purple;
+  }
+  
+  /***** 01 center inline element ****/
+  /*
+  You can center inline elements horizontally, within a block-level parent element with text-align:center;
+  This will work for inline, inline-block, inline-table, inline-flex, etc.
+  */
+  .hCenterInline, .hCenterInline2{
+	text-align: center;
+  }
+  
+  /***** 02 center one block element ****/
+  /*
+	it must has a set width, otherwise it would be full width and wouldn't need centering
+	center horizontally with margin-left and margin-right be auto ,or shorthand: margin: 0 auto
+	This will work no matter what the width of the block level element you're centering, or the parent
+  */
+  .centerBlock{
+	width: 200px;
+	margin: 0 auto;
+	border: 1px solid blue;
+  }
+  
+  /***** 03 center many block elements ****/
+  /*
+	if horizon stack block elements, can make them display as inline-block and make the parent text-align:center;
+	if horizon stack, can also use flex;
+	if vertically stack, use margin: 0 auto still work;
+  */
+  .block-center-inline div{
+	width: 200px;
+	border: 1px solid blue;
+	display: inline-block;
+  }
+  .block-center-inline{
+	text-align: center;
+  }
+  .block-center-flex div{
+	width: 200px;
+	border: 1px solid blue;
+	display: inline-block;
+  }
+  .block-center-flex{
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+  }
+  
+  /***** 04 vertically center inline element ****/
+  /*
+   vertically center single inline text
+   1, you can use equal padding-top and padding-bottom to make seemd center;
+   2, make height equal to line height
+  */
+  .vCenter a{
+	display: inline-block;
+	width: 200px;
+	height:100px;
+	border: solid red;
+	text-align: center;
+	line-height:100px;
+  }
+  
+  
+  /***** 05 vertically center multiple inline element ****/
+  /*
+	make parent element display flex column and justify-content:center
+  */
+  .vCenter2 {
+	width: 100px;
+	height: 200px;
+	border: solid red;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+  }
+  .vCenter2 span{
+	border: solid blue;
+	margin: 0;
+  }
+  
+   /***** 06 vertically center block with height ****/
+   /*
+   if the outer has no height, then vertical center has no effec, so outer must have height
+   if the block to center(here is inner) has height, can make it absolute and top 50%, margin-top: negative half box size
+   Note: margin-top is negative half box size not content size, so here is -60px, not -50px, because box height is 100+10*2
+   */
+  .outer1{
+	width:400px;
+	height: 300px;
+	border: solid red;
+	position:relative;
+	top: 0;
+  }
+  .inner1{
+	width:200px;
+	height: 100px;
+	border: solid blue;
+	background-color: lightblue;
+	padding: 10px;
+	position: absolute;
+	top: 50%;
+	margin-top: -60px;
+  }
+  
+  /***** 07 vertically center block with unknown height ****/
+  /*
+   if can use flex, make parent flex column and jusitfy-content:center;
+   if do not use flex, can also use top+margin-top, here margin-top be replaced by  transform: translateY(-50%)
+  */
+  .outer2{
+	width:400px;
+	height: 300px;
+	border: solid red;
+	/*display: flex;
+	flex-direction:column;
+	justify-content: center;*/
+	position: relative;
+  }
+  .inner2{
+	width: 200px;
+	border: solid blue;
+	padding: 20px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+  }
+  
+   /***** 08 both center block with  height ****/
+  .outer3{
+	width:400px;
+	height: 300px;
+	border: solid red;
+	position:relative;
+	top: 0;
+  }
+  .inner3{
+	width:200px;
+	height: 100px;
+	border: solid blue;
+	background-color: lightblue;
+	padding: 10px;
+	position: absolute;
+	top: 50%;
+	margin-top: -60px;
+	left: 50%;
+	margin-left:-110px;
+  }
+   
+   /***** 09 both center block with unknown height ****/
+   /*
+   with unknown width, horziontally center has no effect ,but here use left+transform has change the width and center it,?
+   */
+  .outer4{
+	width:400px;
+	height: 300px;
+	border: solid red;
+	position: relative;
+  }
+  .inner4{
+	border: solid blue;
+	padding: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  }
+  
+  /***** 10 both center block no matter know or not know size ****/
+  .outer5{
+	width:400px;
+	height: 300px;
+	border: solid red;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  .inner5 {
+	width: 150px;
+	border: solid blue;
+  }
+  
