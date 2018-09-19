@@ -4,3 +4,5 @@
 2. [Part2 任务汇总](https://github.com/960761/myCodeGarden/tree/master/baiduIFE/2016-spring/part2)
 3. [Part3 任务汇总](https://github.com/960761/myCodeGarden/tree/master/baiduIFE/2016-spring/part3)
 4. [Part4 任务汇总](https://github.com/960761/myCodeGarden/tree/master/baiduIFE/2016-spring/part4)
+
+[IFE 2016 spring 官网任务集锦](http://ife.baidu.com/2016/task/all)
