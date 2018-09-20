@@ -1,0 +1,55 @@
+/*
+Author: xin
+Date: 2018.9.19
+Description: use flexbox
+flex link: 
+http://www.w3cplus.com/css3/flexbox-basics.html
+https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes
+Flexbox 理解起来很简单，使用起来也不复杂，关键是熟练使用。
+*/
+
+
+ *{
+	margin: 0;
+	padding: 0;
+  }
+  [class*="box"]{
+	border: 1px solid red;
+  }
+  .box{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	border: none;
+  }		  
+  .box1, .box2, .box3, .box4{
+	flex: 0 0 150px;
+	box-sizing: border-box;
+	padding: 10px;	
+	margin: 20px 0;			
+  }
+  .box1{
+	height:120px;
+	padding-left: 0;
+  }
+  .box2{
+	height: 100px;
+  }
+  .box3{
+	height: 40px;
+  }
+  .box4{
+	height: 200px;
+	padding-right: 0;
+  }
+  /******************************* responsive layout ******************************/
+  @media(max-width:640px){
+	.box{
+	  align-items: flex-start;
+	}
+	.box4{
+	  order: -1; //default 0, the bigger, the behinder, so -1 is before the others
+	}
+  }
+
