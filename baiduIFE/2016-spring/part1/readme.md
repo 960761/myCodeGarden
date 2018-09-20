@@ -22,17 +22,17 @@
 [两列布局float实现原理](https://github.com/960761/myCodeGarden/blob/master/_posts/2018-09-06-使用float实现三or两列布局.md)  
 [两列布局float实现预览](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part1/task05/2col_contentFirst.html) 
 
-task07 任务要求地址：<https://github.com/pkjy/ife-task/blob/gh-pages/2016_spring/part1/task07.md><br>
-task07 在线预览地址：<http://pkjy.github.io/ife-task/2016_spring/part1/task07.html>
+[task07 任务要求地址undo]()  
+[task07 在线预览地址undo]()  
 
-task08 任务要求地址：<https://github.com/pkjy/ife-task/blob/gh-pages/2016_spring/part1/task08.md><br>
-task08 在线预览地址：<http://pkjy.github.io/ife-task/2016_spring/part1/task08.html>
+[task08 任务要求地址](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part1/task05/task08.md)   
+[task08 在线预览地址](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part1/task05/task08.md)   
 
-task09 任务要求地址：<https://github.com/pkjy/ife-task/blob/gh-pages/2016_spring/part1/task09.md><br>
-task09 在线预览地址：<http://pkjy.github.io/ife-task/2016_spring/part1/task09.html>
+[task09 任务要求地址undo]()  
+[task09 在线预览地址undo]()  
 
-task10 任务要求地址：<https://github.com/pkjy/ife-task/blob/gh-pages/2016_spring/part1/task10.md><br>
-task10 在线预览地址：<http://pkjy.github.io/ife-task/2016_spring/part1/task10.html>
+[task10 任务要求地址](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part1/task05/task10.md)  
+[task10 在线预览地址](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part1/task05/task10.md)   
 
 task11 任务要求地址：<https://github.com/pkjy/ife-task/blob/gh-pages/2016_spring/part1/task11.md><br>
 task11 在线预览地址：<http://pkjy.github.io/ife-task/2016_spring/part1/task11.html>
