@@ -1,0 +1,77 @@
+/*
+Author: xin
+Date: 2018.9.19
+Description: use float to implement responsive grid layout
+Link: http://j4n.co/blog/Creating-your-own-css-grid-system
+
+*/
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/**********************************************  row  *****************************************/
+.row {
+  /*border: solid red;*/ 
+}
+
+/*make container contain float elements*/
+.row:after,
+.row:before{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/**********************************************  column  *****************************************/
+[class*="col-"]{
+  /*border:1px solid blue;*/
+  box-sizing: border-box; /* !to remove border effect, border-box is the key*/
+  float: left;
+  padding: 10px;
+}
+.col-md-1 {
+  width: 8.33%;
+}
+.col-md-2 {
+  width: 16.66%;
+}
+.col-md-3 {
+  width: 25%;
+}
+.col-md-4 {
+  width: 33.33%;
+}
+.col-md-6 {
+  width: 50%;
+}
+
+/**********************************************  content  *****************************************/
+[class*="contnt-"]{
+  border: 1px solid gray;
+  background-color: #eee;
+  height: 50px;
+  line-height: 50px;		  
+  box-sizing: border-box;
+}
+
+/**********************************************  responsive design  *****************************************/
+ @media(max-width: 768px){
+   .col-xs-2{
+	 width: 16.66%;
+   }
+   .col-xs-3{
+	 width: 25%;
+   }
+   .col-xs-6{
+	 width: 50%;
+   }
+   .col-xs-8{
+	 width: 66.67%;
+   }
+   .col-xs-12{
+	 width: 100%;
+   }
+ }
+ 
