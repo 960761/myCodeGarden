@@ -25,20 +25,20 @@
 [task07 任务要求地址undo]()  
 [task07 在线预览地址undo]()  
 
-[task08 任务要求地址](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part1/task05/task08.md)   
-[task08 在线预览地址](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part1/task05/task08.md)   
+[task08 任务要求地址](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part1/task08/task08.md)   
+[task08 在线预览地址](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part1/task08/task08.md)   
 
 [task09 任务要求地址undo]()  
 [task09 在线预览地址undo]()  
 
-[task10 任务要求地址](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part1/task05/task10.md)  
-[task10 在线预览地址](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part1/task05/task10.md)   
+[task10 任务要求地址](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part1/task10/task10.md)  
+[task10 在线预览地址](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part1/task10/task10.md)   
 
-task11 任务要求地址：<https://github.com/pkjy/ife-task/blob/gh-pages/2016_spring/part1/task11.md><br>
-task11 在线预览地址：<http://pkjy.github.io/ife-task/2016_spring/part1/task11.html>
+[task11 任务要求地址undo]()
+[task11 在线预览地址undo]()
 
-task12 任务要求地址：<https://github.com/pkjy/ife-task/blob/gh-pages/2016_spring/part1/task12.md><br>
-task12 在线预览地址：<http://pkjy.github.io/ife-task/2016_spring/part1/task12.html>
+[task12 任务要求地址undo]()
+[task12 在线预览地址undo]()
 
 ## IFE春季班第一阶段任务
 
