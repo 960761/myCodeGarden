@@ -22,6 +22,10 @@
 [两列布局float实现原理](https://github.com/960761/myCodeGarden/blob/master/_posts/2018-09-06-使用float实现三or两列布局.md)  
 [两列布局float实现预览](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part1/task05/2col_contentFirst.html) 
 
+
+[task06 任务要求地址undo]()  
+[task06 在线预览地址undo]() 
+
 [task07 任务要求地址undo]()  
 [task07 在线预览地址undo]()  
 
@@ -34,11 +38,11 @@
 [task10 任务要求地址](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part1/task10/task10.md)  
 [task10 在线预览地址](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part1/task10/task10.md)   
 
-[task11 任务要求地址undo]()
-[task11 在线预览地址undo]()
+[task11 任务要求地址undo]()  
+[task11 在线预览地址undo]()  
 
-[task12 任务要求地址undo]()
-[task12 在线预览地址undo]()
+[task12 任务要求地址undo]()  
+[task12 在线预览地址undo]()  
 
 ## IFE春季班第一阶段任务
 
