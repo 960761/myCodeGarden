@@ -1,0 +1,64 @@
+<!--
+Author: xin
+Date: 2018.9.20
+Description: Filter data, sort data, display data.
+NOTES: Pay attention to the 2nd display method, first create the whole HTML sentence, then use DOM to insert.
+       This is more efficient than 1st method, Remember: use DOM as few as possible.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IFE Task 14: JavaScript 02</title>
+  </head>
+<body>
+
+  <h3>污染城市列表</h3>
+  <ul id="aqi-list">
+<!--   
+    <li>第一名：福州（样例），10</li>
+    <li>第二名：福州（样例），10</li> -->
+  </ul>
+
+<script type="text/javascript">
+
+var aqiData = [
+  ["北京", 90],
+  ["上海", 50],
+  ["福州", 10],
+  ["广州", 50],
+  ["成都", 90],
+  ["西安", 100]
+];
+
+(function () {
+   //filter 
+   var rlt = aqiData.filter(function(item){
+     return item[1]>60;
+   });
+   
+   //sort
+   rlt.sort(function(item1,item2){
+     return item2[1]-item1[1];
+   });
+   
+   //display
+   /*for(var i=0; i<rlt.length; i++){
+     var tmp = document.createElement("li");
+	 tmp.innerText = "第" + (i+1) + "名" +": " + rlt[i];
+     document.getElementById("aqi-list").appendChild(tmp);
+   }*/
+   
+   //this method is better, should use DOM as few as possible
+   var html = "";
+   for(var i=0; i<rlt.length; i++){
+	 html += "<li>第" + (i+1) + "名" +": " + rlt[i][0] + " " + rlt[i][1] + "</li>";
+   }
+   document.getElementById("aqi-list").innerHTML = html;
+  
+})();
+
+</script>
+</body>
+</html>
