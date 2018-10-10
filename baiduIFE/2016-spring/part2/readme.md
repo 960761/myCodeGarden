@@ -67,7 +67,12 @@ task36 在线预览地址：<http://pkjy.github.io/ife-task/2016_spring/part2/ta
 
 > **任务十七**：面向零基础的JavaScript代码编写（五），难度中等。做一个较为完成的有JavaScript交互的页面
 
-　
+　### 13-17 notes ：
+1.	DOM事件处理函数的绑定  
+2.	DOM事件中event  对象的使用  
+3.	动态显示Html，html字符串的拼接  
+4.	整体框架的搭建  
+
 
 > **任务十八**：基础JavaScript练习（一），难度简单。实现一个基本队列的相关操作
 
