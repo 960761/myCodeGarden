@@ -1,20 +1,20 @@
 
 # 2016年百度IFE春季班
 ## Demo 
-task13 任务要求地址：<https://github.com/pkjy/ife-task/tree/gh-pages/2016_spring/part2/task13><br>
-task13 在线预览地址：<http://pkjy.github.io/ife-task/2016_spring/part2/task13/>
+[task13 任务要求](https://github.com/960761/myCodeGarden/blob/master/baiduIFE/2016-spring/part2/task13/task13.md)
+[task13 在线预览](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part2/task13/task13.html)
 
-task14 任务要求地址：<https://github.com/pkjy/ife-task/tree/gh-pages/2016_spring/part2/task14><br>
-task14 在线预览地址：<http://pkjy.github.io/ife-task/2016_spring/part2/task14/>
+[task14 任务要求](https://github.com/960761/myCodeGarden/blob/master/baiduIFE/2016-spring/part2/task13/task14.md)
+[task14 在线预览](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part2/task13/task14.html)
 
-task15 任务要求地址：<https://github.com/pkjy/ife-task/tree/gh-pages/2016_spring/part2/task15><br>
-task15 在线预览地址：<http://pkjy.github.io/ife-task/2016_spring/part2/task15/>
+[task15 任务要求](https://github.com/960761/myCodeGarden/blob/master/baiduIFE/2016-spring/part2/task13/task15.md)
+[task15 在线预览](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part2/task13/task15.html)
 
-task16 任务要求地址：<https://github.com/pkjy/ife-task/tree/gh-pages/2016_spring/part2/task16><br>
-task16 在线预览地址：<http://pkjy.github.io/ife-task/2016_spring/part2/task16/>
+[task16 任务要求](https://github.com/960761/myCodeGarden/blob/master/baiduIFE/2016-spring/part2/task13/task16.md)
+[task16 在线预览](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part2/task13/task16.html)
 
-task17 任务要求地址：<https://github.com/pkjy/ife-task/tree/gh-pages/2016_spring/part2/task17><br>
-task17 在线预览地址：<http://pkjy.github.io/ife-task/2016_spring/part2/task17/>
+[task17 任务要求](https://github.com/960761/myCodeGarden/blob/master/baiduIFE/2016-spring/part2/task13/task17.md)
+[task17 在线预览](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part2/task13/task17.html)
 
 task18 任务要求地址：<https://github.com/pkjy/ife-task/tree/gh-pages/2016_spring/part2/task18><br>
 task18 在线预览地址：<http://pkjy.github.io/ife-task/2016_spring/part2/task18/>
@@ -67,7 +67,8 @@ task36 在线预览地址：<http://pkjy.github.io/ife-task/2016_spring/part2/ta
 
 > **任务十七**：面向零基础的JavaScript代码编写（五），难度中等。做一个较为完成的有JavaScript交互的页面
 
-　### 13-17 notes ：
+
+> **13-17 notes**：
 1.	DOM事件处理函数的绑定  
 2.	DOM事件中event  对象的使用  
 3.	动态显示Html，html字符串的拼接  
