@@ -16,11 +16,11 @@
 [task17 任务要求](https://github.com/960761/myCodeGarden/blob/master/baiduIFE/2016-spring/part2/task17/task17.md)  
 [task17 在线预览](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part2/task17/task17.html)
 
-task18 任务要求地址：<https://github.com/pkjy/ife-task/tree/gh-pages/2016_spring/part2/task18><br>
-task18 在线预览地址：<http://pkjy.github.io/ife-task/2016_spring/part2/task18/>
+[task18 任务要求](https://github.com/960761/myCodeGarden/blob/master/baiduIFE/2016-spring/part2/task18/task18.md)  
+[task18 在线预览](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part2/task18/task18.html)
 
-task19 任务要求地址：<https://github.com/pkjy/ife-task/tree/gh-pages/2016_spring/part2/task19><br>
-task19 在线预览地址：<http://pkjy.github.io/ife-task/2016_spring/part2/task19/>
+[task19 任务要求](https://github.com/960761/myCodeGarden/blob/master/baiduIFE/2016-spring/part2/task19/task19.md)  
+[task19 在线预览](https://960761.github.io/myCodeGarden/baiduIFE/2016-spring/part2/task19/task19.html)
 
 task20 任务要求地址：<https://github.com/pkjy/ife-task/tree/gh-pages/2016_spring/part2/task20><br>
 task20 在线预览地址：<http://pkjy.github.io/ife-task/2016_spring/part2/task20/>
