@@ -1,0 +1,54 @@
+
+
+
+<!--
+Author:xin
+Date:2018.10.23
+Des: props and component composition
+
+A stateless functional component is any function you write which accepts props and returns JSX. 
+
+A stateful  component, is a class that extends React.Component, but does not use internal state .
+Finally, a stateful component is any component that does maintain its own internal state. 
+You may see stateful components referred to simply as components or React components.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">	
+	
+		class CampSite extends React.Component {
+		  constructor(props) {
+			super(props);
+		  }
+		  render() {
+			return (
+			  <div>
+				<Camper />
+			  </div>
+			);
+		  }
+		};
+		const Camper= (props) => {
+		  return <p>{props.name}</p>
+		};
+
+		Camper.defaultProps = {name: 'CamperBot'}
+		//Since react 15.5, PropTypes is included in a separate package, 'prop-types'
+		//Camper.propTypes = { name: PropTypes.string.isRequired }
+
+		var ele = document.getElementById("example");
+		ReactDOM.render(<CampSite />,ele);
+	
+	</script>
+  </body>
+</html>
