@@ -1,0 +1,57 @@
+
+
+<!--
+Author: xin
+Date: 2018.10.24
+Des: define method for component
+
+In addition to setting and updating state, you can also define methods for your component class. 
+A class method typically needs to use the this keyword so it can access properties on the class (such as state and props) inside the scope of the method. 
+There are a few ways to allow your class methods to access this.
+
+One common way is to explicitly bind this in the constructor so this becomes bound to the class methods when the component is initialized. 
+You may have noticed the last challenge used this.handleClick = this.handleClick.bind(this) for its handleClick method in the constructor. 
+Then, when you call a function like this.setState() within your class method, this refers to the class and will not be undefined.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">	
+		class MyComponent extends React.Component {
+		  constructor(props) {
+			super(props);
+			this.state = {
+			  itemCount: 0
+			};
+			this.addItem = this.addItem.bind(this);
+		  }
+		  addItem() {
+			this.setState({
+			  itemCount: this.state.itemCount + 1
+			});
+		  }
+		  render() {
+			return (
+			  <div>
+				<button onClick = {this.addItem}>Click Me </button>
+				<h1>Current Item Count: {this.state.itemCount}</h1>
+			  </div>
+			);
+		  }
+		};
+
+		var ele = document.getElementById("example");
+		ReactDOM.render(<MyComponent />,ele);
+	
+	</script>
+  </body>
+</html>
