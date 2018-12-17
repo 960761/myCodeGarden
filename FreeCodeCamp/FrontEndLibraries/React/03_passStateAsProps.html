@@ -1,0 +1,63 @@
+
+
+
+<!--
+Author: xin
+Date: 2018.10.24
+Des: pass state from parent to child as props
+A common pattern is to have a stateful component containing the state important to your app, that then renders child components. 
+You want these components to have access to some pieces of that state, which are passed in as props.
+you have an App component that renders a Navbar, among other components. 
+In your App, you have state that contains a lot of user information, but the Navbar only needs access to the user's username so it can display it. 
+You pass that piece of state to the Navbar component as a prop.
+
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">	
+		class MyApp extends React.Component {
+		  constructor(props) {
+			super(props);
+			this.state = {
+			  name: 'CamperBot'
+			}
+		  }
+		  render() {
+			return (
+			   <div>
+				 <Navbar name={this.state.name} />
+			   </div>
+			);
+		  }
+		};
+
+		class Navbar extends React.Component {
+		  constructor(props) {
+			super(props);
+		  }
+		  render() {
+			return (
+			<div>
+			  <h1>Hello, my name is: {this.props.name} </h1>
+			</div>
+			);
+		  }
+		};
+
+
+		var ele = document.getElementById("example");
+		ReactDOM.render(<MyApp />,ele);
+	
+	</script>
+  </body>
+</html>
