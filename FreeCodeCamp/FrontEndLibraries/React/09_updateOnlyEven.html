@@ -1,0 +1,76 @@
+
+
+<!--
+Author:
+Date:
+Des: life cycle manage methods
+
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">	
+
+	class OnlyEvens extends React.Component {
+	  constructor(props) {
+		super(props);
+	  }
+	  shouldComponentUpdate(nextProps, nextState) {
+		console.log('Should I update?');
+		if(nextProps.value %2){
+		  console.log('No');
+		  return false;
+		}else{
+		  console.log('Yes');
+		  return true;
+		}	
+	  }
+	  componentWillReceiveProps(nextProps) {
+		console.log('Receiving new props...');
+	  }
+	  componentDidUpdate() {
+		console.log('Component re-rendered.');
+	  }
+	  render() {
+		return <h1>{this.props.value}</h1>
+	  }
+	};
+
+	class Controller extends React.Component {
+	  constructor(props) {
+		super(props);
+		this.state = {
+		  value: 0
+		};
+		this.addValue = this.addValue.bind(this);
+	  }
+	  addValue() {
+		this.setState({
+		  value: this.state.value + 1
+		});
+	  }
+	  render() {
+		return (
+		  <div>
+			<button onClick={this.addValue}>Add</button>
+			<OnlyEvens value={this.state.value}/>
+		  </div>
+		);
+	  }
+	};
+
+	var ele = document.getElementById("example");
+	ReactDOM.render(<Controller />,ele);	
+
+	</script>
+  </body>
+</html>
