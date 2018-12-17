@@ -1,0 +1,59 @@
+
+
+<!--
+Author:
+Date:
+Des: two methods of inline style in React
+Notes:
+
+  html inline style and React inline style :
+  style = "color:red; font-size:12px" > style = {{color:"red", fontSize:12}}
+  1. style = "xx" > style = {{}}
+  2. color:red > color:"red"
+  3. xx ; xx > xx , xx
+  4. font-size > fontSize
+
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+	<div id="example2"></div>
+    <script type="text/babel">	
+	
+    //inline style method 1
+    const styles ={color: "purple", fontSize: 40, border:"2px solid purple"};
+	class Colorful extends React.Component {
+	  render() {
+		return (
+		  <div style={styles}>Style Me with inline styles!</div>
+		);
+	  }
+	};
+	
+	//inline style method 2
+	class Colorful2 extends React.Component {
+	  render() {
+		return (
+		  <div style={{color: "red", fontSize: 35, border:"2px solid red"}}>Style Me with inline styles!</div>
+		);
+	  }
+	};
+
+	var ele = document.getElementById("example");
+	ReactDOM.render(<Colorful />,ele);
+	
+    var ele2 = document.getElementById("example2");
+	ReactDOM.render(<Colorful2 />,ele2);
+
+	</script>
+  </body>
+</html>
