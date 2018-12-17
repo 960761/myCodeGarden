@@ -1,0 +1,70 @@
+
+
+<!--
+Author: xin
+Date: 2018.10.24
+Des: use state to toggle element
+
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">	
+		class MyComponent extends React.Component {
+		  constructor(props) {
+			super(props);
+			this.state = {
+			  visibility: false
+			};
+
+			this.toggleVisibility = this.toggleVisibility.bind(this);   
+
+		  }
+
+		  toggleVisibility(){
+			if (this.state.visibility == true) {
+				this.setState({
+				  visibility: false
+				});
+			} else {
+				  this.setState({
+					visibility: true
+				  })
+			}
+		  }
+
+		 render() {
+			if (this.state.visibility) {
+			  return (
+				<div>
+				  <button onClick={this.toggleVisibility}>Click Me</button>
+				  <h1>Now you see me!</h1>
+				</div>
+			  );
+			} else {
+			  return (
+				<div>
+				  <button onClick={this.toggleVisibility}>Click Me</button>
+				</div>
+			  );
+			}
+		  }//end render
+		  
+		};
+
+
+		var ele = document.getElementById("example");
+		ReactDOM.render(<MyComponent />,ele);
+	
+	</script>
+  </body>
+</html>
