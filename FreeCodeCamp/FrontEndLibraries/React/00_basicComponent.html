@@ -1,0 +1,58 @@
+
+
+<!--
+Author:xin
+Date:2018.10.23
+Des: two kinds of components in React.
+
+A stateless functional component is any function you write which accepts props and returns JSX. 
+
+A stateful  component, is a class that extends React.Component, but does not use internal state .
+Finally, a stateful component is any component that does maintain its own internal state. 
+You may see stateful components referred to simply as components or React components.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+	<div id="example2"></div>
+    <script type="text/babel">	
+	
+	class MyComponent extends React.Component {
+	  constructor(props) {
+		super(props);
+	  }
+	  render() {
+		return (
+		  <div>
+			<h1>My First React Component!</h1>
+		  </div>
+		);
+	  }
+	};
+
+	const DemoComponent = function() {
+	  return (
+		<div>
+		  <h1>My First Stateless Functional Component!</h1>
+		</div>
+	  );
+	};
+
+	var ele = document.getElementById("example");
+	ReactDOM.render(<MyComponent />,ele);
+	
+    var ele2 = document.getElementById("example2");
+	ReactDOM.render(<DemoComponent />,ele2);
+
+	</script>
+  </body>
+</html>
