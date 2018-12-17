@@ -1,0 +1,88 @@
+
+
+
+<!--
+Author: xin
+Date: 2018.10.24
+Des: pass state from parent to child as props
+
+You can pass state as props to child components, but you're not limited to passing data. 
+You can also pass handler functions or any method that's defined on a React component to a child component. 
+This is how you allow child components to interact with their parent components. You pass methods to a child just like a regular prop. 
+It's assigned a name and you have access to that method name under this.props in the child component.
+
+There are three components outlined in the code editor. 
+The MyApp component is the parent that will render the GetInput and RenderInput child components.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">	
+		class MyApp extends React.Component {
+		  constructor(props) {
+			super(props);
+			this.state = {
+			  inputValue: ''
+			}
+			this.handleChange = this.handleChange.bind(this);
+		  }
+		  handleChange(event) {
+			this.setState({
+			  inputValue: event.target.value
+			});
+		  }
+		  render() {
+			return (
+			  <div>
+			   <GetInput input={this.state.inputValue} handleChange={this.handleChange} />
+			   <RenderInput input={this.state.inputValue} />
+			  </div>
+			);
+		  }
+		};
+
+		class GetInput extends React.Component {
+		  constructor(props) {
+			super(props);
+		  }
+		  render() {
+			return (
+			  <div>
+				<h3>Get Input:</h3>
+				<input
+				  value={this.props.input}
+				  onChange={this.props.handleChange}/>
+			  </div>
+			);
+		  }
+		};
+
+		class RenderInput extends React.Component {
+		  constructor(props) {
+			super(props);
+		  }
+		  render() {
+			return (
+			  <div>
+				<h3>Input Render:</h3>
+				<p>{this.props.input}</p>
+			  </div>
+			);
+		  }
+		};
+
+		var ele = document.getElementById("example");
+		ReactDOM.render(<MyApp />,ele);
+	
+	</script>
+  </body>
+</html>
