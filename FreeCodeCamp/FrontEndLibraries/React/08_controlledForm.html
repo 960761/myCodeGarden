@@ -1,0 +1,71 @@
+
+
+<!--
+Author: xin
+Date: 2018.10.24
+Des: define method for component
+
+if you have React components with input fields the user can type into, it will be a controlled input form.
+When you type in the input box, that text is processed by the handleChange() method, set as the input property in the local state, 
+and rendered as the value When submit. The component state is the single source of truth regarding the input data.
+
+React can control the internal state for certain elements like input and textarea, which makes them controlled components. 
+This applies to other form elements as well, including the regular HTML form element.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">	
+		class MyForm extends React.Component {
+		  constructor(props) {
+			super(props);
+			this.state = {
+			  input: '',
+			  submit: ''
+			};
+			this.handleChange = this.handleChange.bind(this);
+			this.handleSubmit = this.handleSubmit.bind(this);
+		  }
+		  
+		  handleChange(event) {
+			this.setState({
+			  input: event.target.value
+			});
+		  }
+		  handleSubmit(event) {
+			this.setState({
+			  submit: this.state.input
+			});
+			event.preventDefault();
+		  }
+		  
+		  render() {
+			return (
+			  <div>
+				<form onSubmit={this.handleSubmit}>
+				  <input onChange={this.handleChange} value={this.state.input}></input>
+				  <button type='submit'>Submit!</button>
+				</form>
+				<h1>{this.state.submit}</h1>
+			  </div>
+			);
+		  }
+		  
+		};
+
+
+		var ele = document.getElementById("example");
+		ReactDOM.render(<MyForm />,ele);
+	
+	</script>
+  </body>
+</html>
