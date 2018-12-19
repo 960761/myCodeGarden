@@ -1,0 +1,69 @@
+
+
+<!--
+Author:
+Date:
+Des: life cycle manage methods
+
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">	
+
+		class MyComponent extends React.Component {
+		  constructor(props) {
+			super(props);
+			this.state = {
+			  display: true
+			}
+			this.toggleDisplay = this.toggleDisplay.bind(this);
+		  }
+		  toggleDisplay() {
+			this.setState({
+			  display: !this.state.display
+			});
+		  }
+		  render() {
+			// change code below this line
+		if(this.state.display){
+			  return (
+			   <div>
+				 <button onClick={this.toggleDisplay}>Toggle Display</button>
+				 <h1>Displayed!</h1>
+			   </div>
+			);
+		}else{
+		    //if-else
+	        /*return (
+			   <div>
+				 <button onClick={this.toggleDisplay}>Toggle Display</button>
+			   </div>
+			);*/
+			// {condition && <p>markup</p>}
+			return  (
+			   <div>
+				  <button onClick={this.toggleDisplay}>Toggle Display</button>
+				 {this.state.display &&<h1>Displayed!</h1>}
+			   </div>
+			);
+		}
+
+		  }
+		};
+
+	var ele = document.getElementById("example");
+	ReactDOM.render(<MyComponent />,ele);	
+
+	</script>
+  </body>
+</html>
