@@ -1,0 +1,74 @@
+
+
+<!--
+Author:
+Date:
+Des: life cycle manage methods
+
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">	
+
+		const inputStyle = {
+		  width: 235,
+		  margin: 5
+		}
+
+		class CheckUserAge extends React.Component {
+		  constructor(props) {
+			super(props);
+			this.state = {
+			  input:'',
+			  userAge:''
+			}
+			this.submit = this.submit.bind(this);
+			this.handleChange = this.handleChange.bind(this);
+		  }
+		  handleChange(e) {
+			this.setState({
+			  input: e.target.value,
+			  userAge: ''
+			});
+		  }
+		  submit() {
+			this.setState({
+			  userAge: this.state.input
+			});
+		  }
+		  render() {
+			const buttonOne = <button onClick={this.submit}>Submit</button>;
+			const buttonTwo = <button>You May Enter</button>;
+			const buttonThree = <button>You Shall Not Pass</button>;
+			return (
+			  <div>
+				<h3>Enter Your Age to Continue</h3>
+				<input
+				  style={inputStyle}
+				  type="number"
+				  value={this.state.input}
+				  onChange={this.handleChange} /><br />
+				{
+				   (this.state.userAge == '') ? buttonOne : (this.state.userAge >= 18)? buttonTwo: buttonThree
+				}
+			  </div>
+			);
+		  }
+		};
+
+	var ele = document.getElementById("example");
+	ReactDOM.render(<CheckUserAge />,ele);	
+
+	</script>
+  </body>
+</html>
