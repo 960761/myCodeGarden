@@ -1,0 +1,71 @@
+
+
+<!--
+Author:
+Date:
+Des: life cycle manage methods
+
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">	
+
+		class Results extends React.Component {
+		  constructor(props) {
+			super(props);
+		  }
+		  render() {
+			return (
+			  <h1>
+			  {
+				this.props.fiftyFifty
+			  }
+			  </h1>
+			)
+		  };
+		};
+
+		class GameOfChance extends React.Component {
+		  constructor(props) {
+			super(props);
+			this.state = {
+			  counter: 1
+			}
+			this.handleClick = this.handleClick.bind(this);
+		  }
+		  handleClick() {
+			this.setState({
+			  counter: this.state.counter+1 
+			});
+		  }
+		  render() {
+			let expression = Math.random() > .5; 
+		   
+			return (
+			  <div>
+				<button onClick={this.handleClick}>Play Again</button>
+
+		 {(expression == 1)? <Results fiftyFifty="You win!"/> : <Results fiftyFifty="You lose!"/> }
+
+				<p>{'Turn: ' + this.state.counter}</p>
+			  </div>
+			);
+		  }
+		};
+
+	var ele = document.getElementById("example");
+	ReactDOM.render(<GameOfChance />,ele);	
+
+	</script>
+  </body>
+</html>
